@@ -3,9 +3,14 @@
     padding: 0;
 }
 
+body{
+    border: 1px solid;
+
+}
+
 header{
     margin: 0;
-    background: black;
+    background: rgb(103, 121, 224);
     color: white;
 }
 
@@ -13,7 +18,96 @@ h1{
     text-align: center;
 }
 
+ul{
+    list-style-type: none;
+
+}
+
+.contact{
+    text-align: center;
+    color: azure;
+}
+
+p{
+    text-align: justify;
+    color: rgb(37, 62, 202);
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 img{
-    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    padding: 10px;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+}
+
+img .side {
+    backface-visibility: hidden;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+
+  img:hover {
+    transform: rotateY(180deg);
+  }
+
+.questions{
+    padding: 10px;
+    margin: 5px;
+    font-weight: bold;
+}
+
+footer{
+    text-align: center;
+    background: rgb(103, 121, 224);
+    padding: 5px;
+    margin: 15px;
+}
+
+i{
+    color: rgb(239, 239, 248);
+    font-size: 40px;
+    padding: 5px;
+}
+
+i:hover{
+    color: rgb(231, 230, 173);
+    cursor: pointer;
+    }
+
+.origin{
+    border-style: ridge;
+    text-align: center;
+
+}
+
+.kids{
+    border-style: ridge;
+    text-align: center;
+
+}
+
+.language{
+    border-style: ridge;
+    text-align: center;
+
+}
+
+.visited{
+    border-style: ridge;
+    text-align: center;
+
+}
+
+.sports{
+    border-style: ridge;
+    text-align: center;
+
 }
 
