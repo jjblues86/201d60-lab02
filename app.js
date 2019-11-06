@@ -2,6 +2,7 @@
 
 var userName = prompt('Welcome to my site! What is your name?');
 console.log('Welcome to my site ' + userName + '!');
+alert('Welcome to my site ' + userName + '!');
 
 //Origin
 var origin = prompt('Where is Jerome from?');
