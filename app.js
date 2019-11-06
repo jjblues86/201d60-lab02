@@ -51,11 +51,23 @@ if(sports === 'YES' || sports === 'y'){
 }
 
 //Visited
-var visited = prompt('How many Countries has Jerome visited?');
+var visited = prompt('Has Jerome been to China before?');
 visited = visited.toUpperCase();
 console.log('How many Countries has Jerome visited? ' + visited);
+
+if(visited === 'NO' || visited === 'no'){
+    alert('You guessed it right');
+} else {
+    alert('I have never been to China before');
+}
 
 //Language
 var language = prompt('Does Jerome speak spanish?');
 language = language.toUpperCase();
 console.log('Does Jerome speak spanish? ' + language);
+
+if(language === 'NO' || language === 'no'){
+    alert('Mi no habla espanola');
+} else {
+    alert('You really believe in me :)');
+}
