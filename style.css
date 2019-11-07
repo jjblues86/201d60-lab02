@@ -31,8 +31,8 @@ ul{
 p{
     text-align: justify;
     color: rgb(37, 62, 202);
-    margin-left: auto;
-    margin-right: auto;
+    margin: 15px;
+    padding: 15px;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -40,10 +40,13 @@ img{
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 10px;
     width: 25%;
     padding: 10px;
     transform-style: preserve-3d;
     transition: all 1s ease-in-out;
+    /* box-shadow: 5px 5px #777777; */
+    box-shadow: inset 0 0 10px #777777;
 }
 
 img .side {
