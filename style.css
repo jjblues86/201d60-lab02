@@ -18,6 +18,16 @@ h1{
     text-align: center;
 }
 
+h3{
+    text-align: center;
+    color: rgb(218, 24, 121);
+}
+
+h4{
+    color: rgb(218, 24, 121);
+}
+
+
 ul{
     list-style-type: none;
 
@@ -64,6 +74,28 @@ img .side {
     padding: 10px;
     margin: 5px;
     font-weight: bold;
+    border-radius: 25px;
+
+}
+
+.experience{
+    padding: 25px;
+    margin: 25px;
+    border-radius: 25px;
+    background: rgb(208, 231, 175);
+
+}
+
+.places{
+    margin: 25px;
+    padding: 25px;
+    border-radius: 25px;
+    background: rgb(208, 231, 175);
+}
+
+.fav-place{
+    margin: 25px;
+    padding: 25px;
 }
 
 footer{
