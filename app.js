@@ -6,6 +6,7 @@ console.log('Welcome to my site ' + userName + '!');
 alert('Welcome to my site ' + userName + '!');
 
 //Origin
+function nationalOrigin(){
 var origin = prompt('Where is Jerome from?');
 origin = origin.toUpperCase();
 console.log('Where is Jerome from? ' + origin);
@@ -16,8 +17,10 @@ if(origin === 'THE GAMBIA' || origin === 'the gambia'){
 } else {
     alert('Jerome is from The Gambia')
 }
+}
 
 //Kids
+function hasKids(){
 var kids = prompt('Does Jerome have any kids?');
 kids = kids.toUpperCase();
 console.log('Does Jerome have any kids? ' + kids);
@@ -28,8 +31,10 @@ if(kids === 'YES' || kids === 'y'){
 } else {
     alert('I have one kid');
 }
+}
 
 //Sports
+function favSport(){
 var sports = prompt('Is soccer Jerome\'s favorite sport?');
 sports = sports.toUpperCase();
 console.log('Is soccer Jerome\'s favorite sport? ' + sports);
@@ -40,20 +45,25 @@ if(sports === 'YES' || sports === 'y'){
 } else {
     alert('Actually soccer is my favorite sport');
 }
+}
 
 //Visited
-var visited = prompt('Has Jerome been to China before?');
-visited = visited.toUpperCase();
-console.log('How many Countries has Jerome visited? ' + visited);
+function placeVisited (){
 
-if(visited === 'NO' || visited === 'no'){
-    alert('You guessed it right');
-    correctGuess++;
-} else {
-    alert('I have never been to China before');
+    var visited = prompt('Has Jerome been to China before?');
+    visited = visited.toUpperCase();
+    console.log('How many Countries has Jerome visited? ' + visited);
+    
+    if(visited === 'NO' || visited === 'no'){
+        alert('You guessed it right');
+        correctGuess++;
+    } else {
+        alert('I have never been to China before');
+    }
 }
 
 //Language
+function langSpoken(){
 var language = prompt('Does Jerome speak spanish?');
 language = language.toUpperCase();
 console.log('Does Jerome speak spanish? ' + language);
@@ -64,8 +74,10 @@ if(language === 'NO' || language === 'no'){
 } else {
     alert('You really believe in me :)');
 }
-
+}
 // Let user guess your favorite number
+
+function favNumber(){
 var myNum = 8;
 var tries = 4;
 
@@ -91,8 +103,10 @@ while(tries > 0){
         correctGuess--;
     }
 }
-
+}
 // Guess my favorite colors
+
+function favColor(){
 var colors = ['blue', 'red', 'grey', 'purple'];
 // var len = colors.length;
 
@@ -110,5 +124,11 @@ for( var i = 5; i >= 0; i--){
         alert('Please continue guessing. You have ' + i + ' guesses left');
     }
 }
-
+}
+nationalOrigin();
+hasKids();
+favSport();
+placeVisited();
+langSpoken();
+favNumber();
 alert('You guessed ' + correctGuess + ' out of 7 correct');
