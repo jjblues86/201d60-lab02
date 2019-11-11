@@ -1,114 +1,139 @@
 'use strict';
 var correctGuess = 0;
 
-var userName = prompt('Welcome to my site! What is your name?');
-console.log('Welcome to my site ' + userName + '!');
-alert('Welcome to my site ' + userName + '!');
+function nationalOrigin(){
 
-//Origin
-var origin = prompt('Where is Jerome from?');
-origin = origin.toUpperCase();
-console.log('Where is Jerome from? ' + origin);
-
-if(origin === 'THE GAMBIA' || origin === 'the gambia'){
-    alert('You are right!');
-    correctGuess++;
-} else {
-    alert('Jerome is from The Gambia')
+    var userName = prompt('Welcome to my site! What is your name?');
+    console.log('Welcome to my site ' + userName + '!');
+    alert('Welcome to my site ' + userName + '!');
+    
+    //Origin
+    var origin = prompt('Is Jerome from The Gambia?');
+    origin = origin.toUpperCase();
+    console.log('Where is Jerome from? ' + origin);
+    
+    if(origin === 'YES' || origin === 'yes'){
+        alert('You are right!');
+        correctGuess++;
+    } else {
+        alert('Jerome is from The Gambia')
+    }
 }
 
 //Kids
-var kids = prompt('Does Jerome have any kids?');
-kids = kids.toUpperCase();
-console.log('Does Jerome have any kids? ' + kids);
+function hasKids(){
 
-if(kids === 'YES' || kids === 'y'){
-    alert('You got it');
-    correctGuess++;
-} else {
-    alert('I have one kid');
+    var kids = prompt('Does Jerome have any kids?');
+    kids = kids.toUpperCase();
+    console.log('Does Jerome have any kids? ' + kids);
+    
+    if(kids === 'YES' || kids === 'y'){
+        alert('You got it');
+        correctGuess++;
+    } else {
+        alert('I have one kid');
+    }
 }
+    
+ //Sports
+ function favSports(){
 
-//Sports
-var sports = prompt('Is soccer Jerome\'s favorite sport?');
-sports = sports.toUpperCase();
-console.log('Is soccer Jerome\'s favorite sport? ' + sports);
-
-if(sports === 'YES' || sports === 'y'){
-    alert('Hell Yeah!');
-    correctGuess++;
-} else {
-    alert('Actually soccer is my favorite sport');
-}
+        var sports = prompt('Is soccer Jerome\'s favorite sport?');
+        sports = sports.toUpperCase();
+        console.log('Is soccer Jerome\'s favorite sport? ' + sports);
+        
+        if(sports === 'YES' || sports === 'y'){
+            alert('Hell Yeah!');
+            correctGuess++;
+        } else {
+            alert('Actually soccer is my favorite sport');
+        }
+    }
+    
 
 //Visited
-var visited = prompt('Has Jerome been to China before?');
-visited = visited.toUpperCase();
-console.log('How many Countries has Jerome visited? ' + visited);
+function placeVisited(){
 
-if(visited === 'NO' || visited === 'no'){
-    alert('You guessed it right');
-    correctGuess++;
-} else {
-    alert('I have never been to China before');
+    var visited = prompt('Has Jerome been to China before?');
+    visited = visited.toUpperCase();
+    console.log('How many Countries has Jerome visited? ' + visited);
+    
+    if(visited === 'NO' || visited === 'no'){
+        alert('You guessed it right');
+        correctGuess++;
+    } else {
+        alert('I have never been to China before');
+    }
 }
 
 //Language
-var language = prompt('Does Jerome speak spanish?');
-language = language.toUpperCase();
-console.log('Does Jerome speak spanish? ' + language);
+function langSpoken(){
 
-if(language === 'NO' || language === 'no'){
-    alert('Mi no habla espanola');
-    correctGuess++;
-} else {
-    alert('You really believe in me :)');
+    var language = prompt('Does Jerome speak spanish?');
+    language = language.toUpperCase();
+    console.log('Does Jerome speak spanish? ' + language);
+    
+    if(language === 'NO' || language === 'no'){
+        alert('Mi no habla espanola');
+        correctGuess++;
+    } else {
+        alert('You really believe in me :)');
+    }
 }
 
 // Let user guess your favorite number
-var myNum = 8;
-var tries = 4;
+function favNumber(){
 
-while(tries > 0){
-
-    var userInput = prompt('Can you guess my favorite number?');
-    var userInputInt = parseInt(userInput);
-
-    if(userInputInt < myNum){
-        alert('too small');
-        tries --;
-    } else if(userInputInt > myNum){
-        alert('too large');
-        tries --;
-    } else if(userInputInt === NaN || userInputInt === ''){
-        alert('You need to enter a value');
-    }
-    else if(userInputInt === myNum){
-        tries = 0;
-        alert('You are a winner 👯‍♂️');
-        correctGuess++;
-        break;
-        correctGuess--;
+    var myNum = 8;
+    var tries = 4;
+    
+    while(tries > 0){
+    
+        var userInput = prompt('Can you guess my favorite number?');
+        var userInputInt = parseInt(userInput);
+    
+        if(userInputInt < myNum){
+            alert('too small');
+            tries --;
+        } else if(userInputInt === myNum){
+            alert('you are correct');
+            tries --;
+            break;
+        } else if(userInputInt > myNum){
+            alert('too large');
+            tries--;
+        } else {
+            alert('The correct answer is 8');
+        }
     }
 }
 
 // Guess my favorite colors
-var colors = ['blue', 'red', 'grey', 'purple'];
-// var len = colors.length;
-
-for( var i = 5; i >= 0; i--){
-
-    var userGuess = prompt('Can you guess my favorite colors?');
-    userGuess = userGuess.toLowerCase();
-
-    if(colors.includes(userGuess)){
-        alert('That was a good guess buddy. Blue, Red, Grey and Purple are my favorite colors');
-        console.log(userGuess);
-        correctGuess++;
-        break;
-    } else {
-        alert('Please continue guessing. You have ' + i + ' guesses left');
+function favColor(){
+    var colors = ['blue', 'red', 'grey', 'purple'];
+    // var len = colors.length;
+    
+    for( var i = 5; i >= 0; i--){
+    
+        var userGuess = prompt('Can you guess my favorite colors?');
+        userGuess = userGuess.toLowerCase();
+    
+        if(colors.includes(userGuess)){
+            alert('That was a good guess buddy. Blue, Red, Grey and Purple are my favorite colors');
+            console.log(userGuess);
+            correctGuess++;
+            break;
+        } else {
+            alert('Please continue guessing. You have ' + i + ' guesses left');
+        }
     }
 }
+    nationalOrigin();
+    hasKids()
+    favSports();
+    placeVisited();
+    langSpoken();
+    favNumber();
+    favColor();
 
 alert('You guessed ' + correctGuess + ' out of 7 correct');
